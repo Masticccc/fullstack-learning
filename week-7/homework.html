@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 7 Homework</title>
+    <link rel="stylesheet" href="homework-styles.css" />
+  </head>
+  <body>
+    <!-- Calculator container -->
+    <div class="calculator">
+      <!-- Container for all calculator input elements -->
+      <div class="input-all">
+        <!-- Input history -->
+        <div class="input-history">
+          <!-- Button for input history -->
+          <button class="input-history-btn">
+            <!-- History icon -->
+            <img src="https://www.svgrepo.com/show/499795/history.svg" />
+          </button>
+          <!-- Display input history list -->
+          <div class="input-history-list hidden"></div>
+        </div>
+        <!-- Display current equation -->
+        <div class="input-equation"></div>
+        <!-- Calculator input field -->
+        <input class="calculator-input" readonly />
+      </div>
+      <!-- Calculator buttons -->
+      <div class="calculator-buttons">
+        <!-- Row of calculator buttons -->
+        <div class="row">
+          <button class="calculator-btn">(</button>
+          <button class="calculator-btn">)</button>
+          <button class="calculator-btn del-btn">DEL</button>
+          <button class="calculator-btn">AC</button>
+        </div>
+        <!-- Row of calculator buttons -->
+        <div class="row">
+          <button class="calculator-btn">7</button>
+          <button class="calculator-btn">8</button>
+          <button class="calculator-btn">9</button>
+          <button class="calculator-btn operatorsbutton">/</button>
+        </div>
+        <!-- Row of calculator buttons -->
+        <div class="row">
+          <button class="calculator-btn">4</button>
+          <button class="calculator-btn">5</button>
+          <button class="calculator-btn">6</button>
+          <button class="calculator-btn operatorsbutton">*</button>
+        </div>
+        <!-- Row of calculator buttons -->
+        <div class="row">
+          <button class="calculator-btn">1</button>
+          <button class="calculator-btn">2</button>
+          <button class="calculator-btn">3</button>
+          <button class="calculator-btn operatorsbutton">-</button>
+        </div>
+        <!-- Row of calculator buttons -->
+        <div class="row">
+          <button class="calculator-btn">0</button>
+          <button class="calculator-btn operatorsbutton">.</button>
+          <button class="calculator-btn equal-btn">=</button>
+          <button class="calculator-btn operatorsbutton">+</button>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript for calculator functionality -->
+    <script src="homework-scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is week 6 - Homework 1</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .login {
+        background-color: white;
+
+        width: 600px;
+      }
+
+      .login-sub-info {
+        background-color: #b6dbea;
+        flex: 1;
+        background-image: url('https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/svg/illustrations/login-visual-2.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+      }
+
+      .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo {
+        position: fixed;
+        top: 50px;
+      }
+      .sign-in {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        font-weight: 600;
+      }
+      .caa {
+        font-size: 17.55px;
+        font-weight: 600;
+        color: #b5b5c3;
+        margin-top: 10px;
+      }
+      #caa2 {
+        color: #3699ff;
+      }
+      .namepass {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        display: inline;
+        font-weight: 600;
+      }
+      input {
+        width: 372.5px;
+        height: 66.3px;
+        padding-bottom: 22.75px;
+        padding-left: 19.5px;
+        box-sizing: border-box;
+        margin: 0;
+        font-family: inherit;
+        overflow: visible;
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        background-clip: padding-box;
+        border: 1px solid #e4e6ef;
+        box-shadow: none;
+        border-radius: 0.85rem !important;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        padding-top: 1.75rem !important;
+        padding-bottom: 1.75rem;
+        background-color: #f3f6f9;
+        border-color: #f3f6f9;
+        color: #3f4254;
+      }
+      #fg {
+        color: #3699ff;
+        font-weight: 600;
+        float: right;
+        font-size: 15px;
+      }
+      .button {
+        font-size: 15px;
+        font-weight: 600;
+        background-color: #181c32;
+        border-radius: 5.46px;
+        color: white;
+        border-style: solid;
+        border-width: 0.7px;
+        padding: 13px 26px;
+      }
+      .button2 {
+        position: absolute;
+        bottom: 50px;
+        margin-top: 9.75px;
+        margin-bottom: 9.75px;
+        text-align: center;
+      }
+      #google {
+        color: #3699ff;
+        padding: 13px 26px;
+        border-radius: 5.46px;
+        border-style: none;
+        border-width: 0.7px;
+        background-color: #e1f0ff;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      #logogoogle {
+        height: 1rem;
+        width: 1rem;
+      }
+      .googlebutton {
+        margin-right: 5px;
+      }
+      .header {
+        margin-top: 100px;
+      }
+      .amaze {
+        text-align: center;
+        font-size: 32.5px;
+        box-sizing: border-box;
+        margin-block: 22.75px;
+        margin-top: 22.75px;
+        margin-bottom: 22.75px;
+        color: #181c32;
+        font-weight: 600;
+      }
+      .user {
+        text-align: center;
+        color: #181c32;
+        font-weight: 600;
+        box-sizing: border-box;
+        margin-block-end: 13px;
+        margin-bottom: 13px;
+        font-size: 22.75px;
+        line-height: 34.125px;
+        opacity: 0.7;
+      }
+      .bottom {
+        background-image: url('https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/svg/illustrations/login-visual-2.svg');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/logos/logo.png"
+              class="max-h-75px"
+            />
+          </a>
+        </div>
+        <div class="sign-in">
+          Sign In
+          <div class="caa">or <span id="caa2">Create an account</span></div>
+        </div>
+        <label>
+          <div class="namepass">Email</div>
+          <input />
+        </label>
+        <label>
+          <div class="namepass">Password</div>
+          <span id="fg">Forgot Password ?</span>
+          <input />
+        </label>
+        <div>
+          <button class="button">Sign In</button>
+        </div>
+        <div class="button2">
+          <button id="google">
+            <span class="googlebutton"
+              ><img
+                id="logogoogle"
+                src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" /></span
+            >Sign in with Google
+          </button>
+        </div>
+      </div>
+      <div class="login-sub-info">
+        <div class="header">
+          <div class="amaze">Amazing Wireframes</div>
+          <div class="user">
+            User Experience & Interface Design, Product Strategy <br />Web
+            Application SaaS Solutions
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework 2</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 10px;
+      }
+      .even {
+        background-color: lightgray;
+      }
+      button {
+        background-color: darkgray;
+        border-radius: 20px;
+        border: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td><button type="submit">Edit</button></td>
+        </tr>
+        <tr class="even">
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+          <td><button type="submit">Edit</button></td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>Roland Mendel</td>
+          <td>Austria</td>
+          <td><button type="submit">Edit</button></td>
+        </tr>
+        <tr class="even">
+          <td>Island Trading</td>
+          <td>Helen Bennett</td>
+          <td>UK</td>
+          <td><button type="submit">Edit</button></td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>Yoshi Tannamuri</td>
+          <td>Canada</td>
+          <td><button type="submit">Edit</button></td>
+        </tr>
+        <tr class="even">
+          <td>Magazzini Alimentari Riuniti</td>
+          <td>Giovanni Rovelli</td>
+          <td>Italy</td>
+          <td><button type="submit">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const allButtons = document.querySelectorAll('button');
+      for (let i = 0; i < allButtons.length; i++) {
+        const button = allButtons[i];
+        button.addEventListener('click', function () {
+          alert('Hooray!');
+        });
+      }
+    </script>
+  </body>
+</html>

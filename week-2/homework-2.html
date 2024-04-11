@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This is week 2 - Homework 2</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        color: green;
+      }
+
+      .boldi {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: forestgreen;
+      }
+
+      .orange {
+        color: orange;
+      }
+
+      .blue {
+        color: blue;
+        font-style: italic;
+      }
+
+      .pink {
+        color: pink;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is week 2 - Homework 2</h1>
+
+    <div><span class="boldi">1st</span> text block!</div>
+
+    <div class="red"><span class="boldi">2nd</span> text block!</div>
+
+    <div class="green">
+      <span class="boldi">3rd</span>
+      <span class="italic">text block!</span>
+    </div>
+
+    <div class="orange"><span class="boldi pink">4th</span> text block!</div>
+
+    <div class="blue"><span class="boldi">5th</span> text block!</div>
+
+    <script>
+      document.querySelector('.red').addEventListener('click', function () {
+        alert('Red text is clicked!');
+      });
+
+      document.querySelector('.green').addEventListener('click', function () {
+        alert('Green text is clicked!');
+      });
+
+      document.querySelector('.orange').addEventListener('click', function () {
+        alert('Orange text is clicked!');
+      });
+
+      document.querySelector('.blue').addEventListener('click', function () {
+        alert('Blue text is clicked!');
+      });
+    </script>
+  </body>
+</html>

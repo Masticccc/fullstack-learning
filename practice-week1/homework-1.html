@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice Week 1 - Homework 1</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .login-sub-info {
+        align-items: center;
+        background-color: white;
+        background-image: url('https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/svg/illustrations/features.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 600px;
+      }
+      .header {
+        position: fixed;
+        top: 48.75px;
+      }
+      #metronic {
+        box-sizing: border-box;
+        color: #3699ff;
+        font-size: 13px;
+        font-weight: 400;
+        height: 79px;
+        line-height: 19.5px;
+        outline-color: #3699ff;
+        padding-top: 19.5px;
+        padding-bottom: 19.5px;
+        text-align: left;
+        text-decoration-color: #3699ff;
+        text-decoration-style: solid;
+        width: 405px;
+      }
+      .wizard-nav {
+        box-sizing: border-box;
+        padding-top: 225.25px;
+        text-align: left;
+        width: 405px;
+      }
+      .wizard-label {
+        display: flex;
+        padding-bottom: 9.75px;
+        padding-top: 9.75px;
+        margin-bottom: 19.5px;
+      }
+      .wizard-number {
+        align-items: center;
+        background-color: #f3f6f9;
+        border-radius: 50px;
+        box-sizing: border-box;
+        color: #3f4254;
+        display: flex;
+        font-size: 17.55px;
+        font-weight: 600;
+        height: 50px;
+        justify-content: center;
+        line-height: 19.5px;
+        margin-right: 18.2px;
+        text-align: left;
+        text-size-adjust: 100%;
+        width: 50px;
+      }
+      #number1 {
+        background-color: #87b2fe;
+        color: #1bc5bd;
+      }
+      #wizardspan {
+        width: 355px;
+        height: 50px;
+      }
+      #wizard-line1 {
+        box-sizing: border-box;
+        color: #181c32;
+        display: block;
+        font-size: 18.2px;
+        font-weight: 500;
+        line-height: 21.84px;
+        margin-block-end: 6.5px;
+        margin-bottom: 6.5px;
+        text-align: left;
+      }
+      #wizard-line2 {
+        box-sizing: border-box;
+        color: #b5b5c3;
+        display: block;
+        font-size: 14.04px;
+        font-weight: 500;
+        line-height: 21.06px;
+        text-align: left;
+      }
+      .login {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f3f5fa;
+        flex: 1;
+      }
+      .head2 {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 16.25px;
+        position: fixed;
+        top: 32.5px;
+        text-align: right;
+        width: 650px;
+      }
+      #hav {
+        box-sizing: border-box;
+        color: #b5b5c3;
+        font-size: 17.55px;
+        font-weight: 500;
+        line-height: 26.325px;
+        margin-left: 6.5px;
+        outline-color: #3699ff;
+        text-decoration-color: #3699ff;
+        text-decoration-style: solid;
+      }
+      #get {
+        box-sizing: border-box;
+        color: #3699ff;
+        font-size: 17.55px;
+        font-weight: 600;
+        line-height: 26.325px;
+        margin-left: 6.5px;
+        outline-color: #3699ff;
+        text-decoration-color: #3699ff;
+        text-decoration-style: solid;
+      }
+      .sign-in {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        width: 650px;
+        padding-bottom: 48.75px;
+      }
+      .ca0 {
+        font-size: 29.25px;
+        margin-block-end: 6.5px;
+        margin-bottom: 6.5px;
+
+        text-align: left;
+      }
+      .ca {
+        display: block;
+        box-sizing: border-box;
+      }
+      .ca1 {
+        font-size: 17.55px;
+        font-weight: 500;
+        color: #b5b5c3;
+        margin-top: 10px;
+      }
+      #ca2 {
+        color: #3699ff;
+        font-weight: 600;
+        font-size: 17.55px;
+      }
+      .namepass {
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15.275px;
+        font-weight: 600;
+        margin-bottom: 6.5px;
+      }
+      input {
+        width: 650px;
+        height: 68.41px;
+        padding-bottom: 22.75px;
+        padding-top: 22.75px;
+        padding-left: 19.5px;
+        padding-right: 19.5px;
+        border-radius: 11.05px;
+        box-sizing: border-box;
+        margin: 0;
+        font-family: inherit;
+        overflow: visible;
+        display: block;
+        font-size: 15.275px;
+        font-weight: 400;
+        line-height: 22.9125px;
+        background-clip: padding-box;
+        border: 1px solid #e4e6ef;
+        box-shadow: none;
+        background-color: #ffffff;
+        border-color: #f3f6f9;
+        color: #3f4254;
+      }
+      ::placeholder {
+        color: #b5b5c3;
+      }
+      .formgroup {
+        margin-bottom: 22.75px;
+      }
+      .button {
+        align-items: flex-start;
+        background-color: #3699ff;
+        border-color: #3699ff;
+        border-radius: 5.46px;
+        border-style: solid;
+        border-width: 0.667px;
+        box-sizing: border-box;
+        color: white;
+        display: flex;
+        font-size: 15.275px;
+        font-weight: 600;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 9.75px;
+        margin-bottom: 9.75px;
+        padding-block-end: 13px;
+        padding-block-start: 13px;
+        padding-left: 26px;
+        padding-bottom: 13px;
+        padding-top: 13px;
+        padding-right: 13px;
+        text-align: center;
+      }
+      #arrow {
+        margin-left: 5px;
+      }
+      #button1 {
+        margin-top: 3.25px;
+        width: 650px;
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-sub-info">
+        <div class="header">
+          <div id="metronic">
+            <a href="#" class="login-logo py-6">
+              <img
+                src="https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/logos/logo-1.png"
+                id="imglogo"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+        <div class="wizard-nav">
+          <!--begin::Wizard Steps-->
+          <div class="wizard-steps">
+            <!--begin::Wizard Step 1 Nav-->
+            <div class="wizard-label">
+              <div class="wizard-number" id="number1">1</div>
+              <div id="wizardspan">
+                <div id="wizard-line1">Account Settings</div>
+                <div id="wizard-line2">Setup Your Account Details</div>
+              </div>
+            </div>
+            <!--end::Wizard Step 1 Nav-->
+
+            <!--begin::Wizard Step 2 Nav-->
+            <div class="wizard-label">
+              <div class="wizard-number">2</div>
+              <div id="wizardspan">
+                <div id="wizard-line1">Address Details</div>
+                <div id="wizard-line2">Setup Residence Address</div>
+              </div>
+            </div>
+            <!--end::Wizard Step 2 Nav-->
+
+            <!--begin::Wizard Step 3 Nav-->
+            <div class="wizard-label">
+              <div class="wizard-number">3</div>
+              <div id="wizardspan">
+                <div id="wizard-line1">Make Payment</div>
+                <div id="wizard-line2">Use Credit or Debit Cards</div>
+              </div>
+            </div>
+            <!--end::Wizard Step 3 Nav-->
+
+            <!--begin::Wizard Step 4 Nav-->
+            <div class="wizard-label">
+              <div class="wizard-number">4</div>
+              <div id="wizardspan">
+                <div id="wizard-line1">Completed!</div>
+                <div id="wizard-line2">Review and Submit</div>
+              </div>
+            </div>
+            <!--end::Wizard Step 4 Nav-->
+          </div>
+          <!--end::Wizard Steps-->
+        </div>
+      </div>
+      <div class="login">
+        <div class="head2">
+          <span id="hav">Having issue?</span>
+          <span id="get">Get help</span>
+        </div>
+        <div class="sign-in">
+          <div class="ca0">Create Account</div>
+          <div class="ca">
+            <span class="ca1">Already have an Account ?</span>
+            <span id="ca2">Sign In</span>
+          </div>
+        </div>
+        <label class="formgroup">
+          <div class="namepass">First Name</div>
+          <input placeholder="First Name" />
+        </label>
+        <label class="formgroup">
+          <div class="namepass">Last Name</div>
+          <input placeholder="Last Name" />
+        </label>
+        <label class="formgroup">
+          <div class="namepass">Phone</div>
+          <input placeholder="Phone" />
+        </label>
+        <div id="button1">
+          <button class="button">
+            Next Step
+            <svg
+              id="arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="19.5px"
+              height="19.5px"
+              viewBox="0 0 24 24"
+              version="1.1"
+            >
+              <title>Stockholm-icons / Navigation / Right-2</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                <rect
+                  fill="#87b2fe"
+                  opacity="0.3"
+                  transform="translate(8.500000, 12.000000) rotate(-90.000000) translate(-8.500000, -12.000000) "
+                  x="7.5"
+                  y="7.5"
+                  width="2"
+                  height="9"
+                  rx="1"
+                ></rect>
+                <path
+                  d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z"
+                  fill="#ffffff"
+                  fill-rule="nonzero"
+                  transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997) "
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

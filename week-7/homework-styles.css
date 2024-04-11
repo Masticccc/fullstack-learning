@@ -1,0 +1,161 @@
+body {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS styles for calculator buttons and input */
+.calculator {
+  display: block;
+}
+
+.calculator-btn {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: block;
+  height: 50px;
+  width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #4d4e52;
+  background-color: #dbdce0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-width: 1;
+  border-color: #4d4e52;
+  border-radius: 4px;
+  border-style: none;
+  padding-block: 1px;
+  padding-inline: 6px;
+}
+
+.calculator-btn:hover {
+  background-color: #666;
+  color: #fff;
+}
+.calculator-btn:disabled {
+  opacity: 0.5;
+}
+
+.calculator-input {
+  flex: 1;
+  border: 2px solid #dbdce0;
+  border-radius: 4px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-width: 1;
+  background-color: field;
+  outline: none;
+  color: fieldtext;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  text-align: right;
+  padding-block-end: 10px;
+  padding-block-start: 30px;
+  padding-inline-end: 10px;
+  padding-inline-start: 2px;
+}
+
+.calculator-buttons {
+  display: block;
+}
+
+.del-btn {
+  background-color: #f44242;
+  color: #fff;
+}
+
+.del-btn:hover {
+  background-color: #c11d1d;
+}
+
+.equal-btn {
+  background-color: #4286f4;
+  color: #fff;
+}
+
+.equal-btn:hover {
+  background-color: #1f5fc7;
+}
+
+.input-all {
+  display: flex;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.input-history {
+  display: block;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+.input-equation {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #999;
+}
+
+.input-history-btn {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+}
+
+.input-history-btn:hover {
+  background-color: #dbdce0;
+}
+
+.input-history-list {
+  margin-top: 3px;
+  max-height: 200px;
+  max-width: 500px;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.history-item {
+  display: block;
+  padding: 10px;
+}
+
+.history-item:hover {
+  background-color: #dbdce0;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 5px;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.operatorsbutton:disabled {
+  opacity: 0.5;
+}

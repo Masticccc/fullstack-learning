@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework 1</title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        if (typeof x !== 'number' || typeof y !== 'number') {
+          throw new Error('Both arguments must be numbers');
+        }
+
+        return x + y;
+      }
+      let result = sum(6, 10);
+      console.log(result);
+    </script>
+    <script>
+      function convertFtoC(fahrenheit) {
+        if (typeof fahrenheit !== 'number') {
+          throw new Error('The argument must be a number');
+        }
+
+        return ((fahrenheit - 32) * 5) / 9;
+      }
+      let cTemperature = convertFtoC(120);
+
+      console.log('temperature result', cTemperature);
+    </script>
+    <script>
+      function greetMe(name, age) {
+        if (typeof name !== 'string' || typeof age !== 'number') {
+          throw new Error(
+            'Invalid arguments. Name must be a string and age must be a number.'
+          );
+        }
+
+        return `My name is ${name} and I am ${age} years old!`;
+      }
+      let greetMeResult = greetMe('Jack', 40);
+
+      console.log('greet me result', greetMeResult);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 2</title>
+    <style>
+      .mainform {
+        width: 450px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      input {
+        border-radius: 25px;
+        border: 1px solid gray;
+        width: 100%;
+      }
+      #summaryResult {
+        background: lightseagreen;
+        border: none;
+        text-align: center;
+        padding: 10px;
+      }
+      button {
+        margin-top: 20px;
+        border: none;
+        background-color: crimson;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+      }
+      #age {
+        width: 150px;
+      }
+      div {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainform">
+      <form id="summaryForm">
+        <label for="firstName">First Name:</label>
+        <div class="Name">
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            maxlength="100"
+            required
+          />
+        </div>
+
+        <label for="lastName">Last Name:</label>
+        <div class="Name">
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            maxlength="100"
+            required
+          />
+        </div>
+        <label for="age">Age:</label>
+        <div>
+          <input
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            id="age"
+            name="age"
+            min="3"
+            max="140"
+            required
+          />
+        </div>
+        <div id="summaryResult"></div>
+        <div>
+          <button type="button" onclick="generateSummary()">
+            Create a summary
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function generateSummary() {
+        // Get values from inputs
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const age = parseInt(document.getElementById('age').value);
+
+        try {
+          // Validate character limits
+          if (firstName.length > 100 || lastName.length > 100) {
+            throw new Error(
+              'First name and last name must be 100 characters or fewer.'
+            );
+          }
+          // Validate age range
+          if (age < 3 || age > 140) {
+            throw new Error('Age must be between 3 and 140.');
+          }
+          // Create a summary using the createSummary function
+          const summary = createSummary(firstName, lastName, age);
+
+          // Display the summary in the div
+          document.getElementById('summaryResult').innerText = summary;
+        } catch (error) {
+          // Handle invalid input errors
+          document.getElementById(
+            'summaryResult'
+          ).innerText = `Error: ${error.message}`;
+        }
+      }
+
+      function createSummary(firstname, lastname, age) {
+        if (
+          typeof firstname !== 'string' ||
+          typeof lastname !== 'string' ||
+          typeof age !== 'number'
+        ) {
+          throw new Error(
+            'Invalid arguments. Firstname and lastname must be strings, and age must be a number.'
+          );
+        }
+
+        return `Hello, my name is ${firstname} ${lastname}. I am ${age} years old!`;
+      }
+    </script>
+  </body>
+</html>
