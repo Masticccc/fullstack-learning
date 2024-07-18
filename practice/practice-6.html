@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+      .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        border: none;
+        border-radius: 0;
+        background-color: black;
+        color: #fff;
+        padding: 20px 60px;
+        font-size: 20px;
+      }
+
+      .button span {
+        padding: 5px;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+        color: white;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .indigo {
+        background-color: indigo;
+        color: white;
+      }
+      .violet {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body class="red">
+    <div class="container">
+      <button class="button">To <span class="orange">orange</span></button>
+    </div>
+    <script>
+      let body = document.body;
+      let changeColorButton = document.querySelector('.button');
+      let colorSpan = changeColorButton.querySelector('span');
+      let rainbowColors = [
+        'red',
+        'orange',
+        'yellow',
+        'green',
+        'blue',
+        'indigo',
+        'violet',
+      ];
+      // The span will hold the color we should change the body to
+      // so we should remove the body classname first
+      // then add the classname from the span to the body
+      // After that, we need to figure out the next color classname based
+      // on the current color classname of the span and set the span color
+      // classname to it
+      let onChangeColorButtonClicked = function () {
+        let currentBodyClassName = body.className;
+        let currentSpanClassName = colorSpan.className;
+
+        // remove current color classname from body
+        body.classList.remove(currentBodyClassName);
+
+        // apply the current span classname to the body
+        body.classList.add(currentSpanClassName);
+
+        // get the next color classname by getting the index
+        // of the current color
+        let currentSpanColorIndex = rainbowColors.indexOf(currentSpanClassName);
+
+        // the next color is the color after the currentSpanColorIndex in the array
+        let nextColorIndex = currentSpanColorIndex + 1;
+
+        // but if the next index is the last item in the array (violet) then we should
+        // set it back to 0
+        if (nextColorIndex === rainbowColors.length - 1) {
+          nextColorIndex = 0;
+        }
+
+        let nextColorClassname = rainbowColors[nextColorIndex];
+
+        // Remove current classname
+        colorSpan.classList.remove(currentSpanClassName);
+        // add new classname
+        colorSpan.classList.add(nextColorClassname);
+        // change the text to the new classname
+        colorSpan.innerHTML = nextColorClassname;
+      };
+
+      changeColorButton.addEventListener('click', onChangeColorButtonClicked);
+    </script>
+  </body>
+</html>
