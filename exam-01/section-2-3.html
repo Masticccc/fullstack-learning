@@ -19,7 +19,7 @@
       // Function to add a new task from the input box
       function addTask() {
         // Select the input
-        let input = document.querySelector('taskInput');
+        let input = document.querySelector('#taskInput');
 
         // Get the value from the input
         let newTask = input.value;
@@ -28,7 +28,7 @@
         if (newTask) {
           let listItem = createTaskItem(newTask);
 
-          document.querySelector('taskList').appendChild(listItem);
+          document.querySelector('.taskList').appendChild(listItem);
           input.value = ''; // Clear the input after adding
         } else {
           // throw alert if the input is empty
@@ -40,7 +40,7 @@
         let listItem = document.createElement('li');
 
         listItem.innerHTML = `
-            $task}
+            ${task}
             <button data-component="delete">Delete</button>
         `;
 
@@ -49,7 +49,7 @@
 
         // Event listener for deleting a task
         // When calling this method, I want to remove the listItem from the page
-        deleteBtn.addEventListener(onDeleteButtonClik);
+        deleteBtn.addEventListener('click', onDeleteButtonClick);
 
         return listItem; // Return the new list item
       }
@@ -62,7 +62,7 @@
         let listItem = currentButton.parentElement;
 
         // remove the Todo <li> from the page
-        listItem.remo();
+        listItem.remove();
       }
 
       // Function to mark a task as completed
