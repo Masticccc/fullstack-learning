@@ -1,0 +1,26 @@
+.TagList {
+  margin-bottom: 16px;
+}
+
+.TagItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.TagColor {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.TagName {
+  margin-right: 4px;
+}
+
+.TagCount {
+  margin-right: 8px;
+  color: #aaa;
+}

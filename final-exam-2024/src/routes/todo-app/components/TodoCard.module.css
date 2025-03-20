@@ -1,0 +1,63 @@
+.Card {
+  position: relative;
+  background-color: #fffde7;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 16px;
+  min-height: 80px;
+}
+
+.TagIndicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.Title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.Timestamp {
+  font-size: 12px;
+  color: gray;
+}
+
+.Description {
+  margin-top: 4px;
+}
+
+.Dropdown {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.Checkbox {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.Footer {
+  position: absolute;
+  bottom: 8px;
+  left: 24px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.DoneCard {
+  opacity: 0.8;
+}
+.DoneText {
+  text-decoration: line-through;
+}
