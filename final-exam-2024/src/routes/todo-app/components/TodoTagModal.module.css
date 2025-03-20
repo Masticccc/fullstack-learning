@@ -1,0 +1,24 @@
+.ModalTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.colorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.colorCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.colorCircle:hover {
+  transform: scale(1.1);
+}

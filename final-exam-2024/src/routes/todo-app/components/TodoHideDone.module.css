@@ -1,0 +1,17 @@
+.HideDoneContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.Indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: red;
+  margin-right: 8px;
+}
+.Active {
+  background-color: #fffde7;
+}
