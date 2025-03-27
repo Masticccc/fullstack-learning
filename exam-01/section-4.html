@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoMVC: React</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-control {
+        margin-bottom: 10px;
+      }
+      .task-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      .task-item:last-child {
+        border-bottom: none;
+      }
+      .task-item .task-text {
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+      .task-item .task-actions {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-4">todos</h1>
+      <form id="taskForm">
+        <input
+          type="text"
+          class="form-control"
+          id="taskInput"
+          placeholder="Enter a task"
+        />
+        <button type="submit" class="btn btn-primary btn-block mt-3">
+          Add Task
+        </button>
+      </form>
+      <ul class="task-list mt-4" id="taskList"></ul>
+    </div>
+
+    <script>
+      document
+        .getElementById('taskForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
+          const taskInput = document.getElementById('taskInput');
+          const taskText = taskInput.value.trim();
+
+          if (taskText !== '') {
+            const taskList = document.getElementById('taskList');
+            const taskItem = document.createElement('li');
+            taskItem.className = 'task-item d-flex';
+            taskItem.innerHTML = `
+          <span class="task-text">${taskText}</span>
+          <div class="task-actions">
+            <button type="button" class="btn btn-sm btn-outline-success mr-2"><i class="fas fa-check"></i></button>
+            <button type="button" class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></button>
+          </div>
+        `;
+            taskList.appendChild(taskItem);
+            taskInput.value = '';
+          }
+        });
+
+      document.addEventListener('click', function (event) {
+        if (event.target.classList.contains('fa-check')) {
+          const taskItem = event.target.closest('.task-item');
+          taskItem.classList.toggle('completed');
+        }
+        if (event.target.classList.contains('fa-trash')) {
+          const taskItem = event.target.closest('.task-item');
+          taskItem.remove();
+        }
+      });
+    </script>
+  </body>
+</html>
