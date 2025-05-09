@@ -1,0 +1,83 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.button.red {
+  background-color: red;
+}
+.button.green {
+  background-color: green;
+}
+.button.blue {
+  background-color: blue;
+}
+.button.purple {
+  background-color: purple;
+}
+.button.orange {
+  background-color: orange;
+}
+.button.black {
+  background-color: black;
+}
+
+.container.white {
+  background-color: white;
+}
+
+.container.red {
+  background-color: red;
+}
+
+.container.green {
+  background-color: green;
+}
+
+.container.blue {
+  background-color: blue;
+}
+
+.container.purple {
+  background-color: purple;
+}
+
+.container.orange {
+  background-color: orange;
+}
+
+.container.black {
+  background-color: black;
+}
+
+.heading {
+  font-size: 24px;
+  color: white;
+}
